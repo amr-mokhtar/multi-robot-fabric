@@ -1,0 +1,2 @@
+./teardown.sh
+./startFabric.sh

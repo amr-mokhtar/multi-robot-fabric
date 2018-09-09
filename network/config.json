@@ -1,0 +1,35 @@
+	{
+	"network-config": {
+		"org1": {
+			"name": "peerOrg1",
+			"mspid": "Org1MSP",
+			"peer1": {
+				"requests": "grpcs://127.0.0.1:7051",
+				"events": "grpcs://127.0.0.1:7053",
+				"server-hostname": "peer0.org1.dcu.ie",
+				"tls_cacerts": "/home/ubuntu/workspace/multi-robot-fabric/network/crypto-config/peerOrganizations/org1.dcu.ie/peers/peer0.org1.dcu.ie/tls/ca.crt"
+			},
+			"admin": {
+				"key": "/home/ubuntu/workspace/multi-robot-fabric/network/crypto-config/peerOrganizations/org1.dcu.ie/users/Admin@org1.dcu.ie/msp/keystore",
+				"cert": "/home/ubuntu/workspace/multi-robot-fabric/network/crypto-config/peerOrganizations/org1.dcu.ie/users/Admin@org1.dcu.ie/msp/signcerts"
+			}
+		}
+	},
+	"channel": "mychannel",
+	"orderers":[
+				{
+				"mspid": "OrdererMSP",
+				"server-hostname":"orderer.dcu.ie",
+				"requests":"grpcs://127.0.0.1:7050",
+				"tls_cacerts":"/home/ubuntu/workspace/multi-robot-fabric/network/crypto-config/ordererOrganizations/dcu.ie/orderers/orderer.dcu.ie/tls/ca.crt"
+				}
+				],
+	"keyValueStore": "/tmp/fabric-client-kvs",
+	"configtxgenToolPath": "/home/ubuntu/workspace/hyperledger/fabric-samples/bin",
+	"SYNC_START_DATE_FORMAT":"YYYY/MM/DD",
+	"syncStartDate":"2018/08/19",
+	"eventWaitTime": "30000",
+	"license": "Apache-2.0",
+	"version": "1.1"
+	}
+
